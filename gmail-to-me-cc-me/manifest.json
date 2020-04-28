@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "GMail - To Me / CC Me",
+    "version": "1.0",
+    "content_scripts": [
+    {
+        "matches": ["https://mail.google.com/*", "http://mail.google.com/*"],
+        "js": ["mutation-summary.js", "jquery-2.2.4.min.js", "content.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+    }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs", "https://mail.google.com/*"
+    ],
+    "description": "Shows the emails which are addressed to you in 'To:' and/or 'CC:' in a different color than the rest of the mail threads for easy differenciation",
+    "icons": { 
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}

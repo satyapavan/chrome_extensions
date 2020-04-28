@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "plural_assess_scraper",
+    "version": "1.0",
+    "content_scripts": [
+    {
+        "matches": ["https://*/score/skill-assessment/*", "https://*/score/skill-assessment/*"],
+        "js": ["mutation-summary.js", "jquery-2.2.4.min.js", "content.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+    }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs", "downloads"
+    ],
+    "description": "To scrape the assessment questions"
+}

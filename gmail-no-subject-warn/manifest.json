@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "GMail - No Subject Warning",
+    "version": "1.0",
+    "content_scripts": [
+    {
+        "matches": ["https://mail.google.com/*", "http://mail.google.com/*"],
+        "js": ["mutation-summary.js", "jquery-2.2.4.min.js", "content.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+    }
+    ],
+    "permissions": [
+        "tabs", "https://mail.google.com/*"
+    ],
+    "description": "By default, unlike Outlook, GMail does not show a warning when there is no subject set for the email. There is no option to set it either, this is a solution for that problem."
+}
