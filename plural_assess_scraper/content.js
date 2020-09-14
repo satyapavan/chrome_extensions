@@ -7,34 +7,35 @@ function renderlistitem(e) {
         var v_question ;
 
         if( $(document).find('div.main__2Qmtb > div > div > p:nth-of-type(2)').length > 0) {
-            v_question = $(document).find('div.main__2Qmtb > div > div > p:nth-of-type(2)').text();
+            v_question = $(document).find('div.main__2Qmtb > div > div > p:nth-of-type(2)')[0].outerHTML;
         }
 
         console.log("v_question=> " + v_question);
 
+        console.log($(document).find('.questionChoices__oUPbm > li:nth-of-type(1) > div > p '));
 
-        var a1 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(1) > div > p ').text();
+        var a1 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(1) > div > p ')[0].outerHTML;
         console.log("A1-> " + a1);
 
         var k1 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(1)').attr('data-choice');
         console.log("k1-> " + k1);
       
 
-        var a2 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(2) > div > p ').text();
+        var a2 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(2) > div > p ')[0].outerHTML;
         console.log("A2-> " + a2);
 
         var k2 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(2)').attr('data-choice');
         console.log("k2-> " + k2);
 
 
-        var a3 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(3) > div > p ').text();
+        var a3 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(3) > div > p ')[0].outerHTML;
         console.log("A3-> " + a3);
 
         var k3 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(3)').attr('data-choice');
         console.log("k3-> " + k3);
 
 
-        var a4 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(4) > div > p ').text();
+        var a4 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(4) > div > p ')[0].outerHTML;
         console.log("A4-> " + a4);
 
         var k4 = $(document).find('.questionChoices__oUPbm > li:nth-of-type(4)').attr('data-choice');
