@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(
 
         chrome.downloads.download({
             url: "data:text/json," + request.payload,
-            filename: 'devops' + '_' + hash + '.json',
+            filename: hash + '.json',
             conflictAction: "uniquify", // or "overwrite" / "prompt"
             saveAs: false, // true gives save-as dialogue
         }, function(downloadId) {
